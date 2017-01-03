@@ -1,0 +1,5 @@
+database_instance_size    = "db.r3.large"
+application_instance_size = "t2.medium"
+asg_min_size              = "2"
+asg_max_size              = "4"
+asg_desired_capacity      = "2"

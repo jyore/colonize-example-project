@@ -1,0 +1,14 @@
+variable "availability_zones" {
+  type    = "list"
+  default = [ "a", "c" ]
+}
+
+variable "subnets" {
+  type    = "map"
+  default = {
+    nonprod-database-az1    = "10.0.10.0/24"
+    nonprod-database-az2    = "10.0.20.0/24"
+    nonprod-application-az1 = "10.0.30.0/24"
+    nonprod-application-az2 = "10.0.40.0/24"
+  }
+}

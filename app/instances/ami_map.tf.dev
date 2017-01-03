@@ -1,0 +1,7 @@
+
+variable "ami_by_region" {
+  type = "map"
+  default = {
+    "us-east-1" = "ami-9be6f38c"
+  }
+}
