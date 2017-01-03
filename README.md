@@ -27,6 +27,14 @@ since we will use a different environment naming scheme. The `nonprod` VPC would
 > **Note:** You may need to modify the bucket names for your own use-case. You would do this in 
 the **vpc/main.tf**, **env/remote_setup.sh**, **app/env/vpc.tf**, & **app/env/security_group.tf**
 
+Since the VPC template is creating the S3 bucket that stores the remote statefiles, we must use
+the `skip_remote` flag. This instructs Colonize to not to pull the remote statefile, as it would
+clearly faile because the bucket does not exist. Since we do want remote state management, when
+we run apply, the `remote_state_after_apply` command it also passed in. This instructs Colonize to
+update the remote state after the apply has run, thus storing the statefile in the S3 bucket.
+
+After the first run, we should not need the `skip_remote` or `remote_state_after_apply` commands 
+anymore.
 
 ## Building the Application
 
