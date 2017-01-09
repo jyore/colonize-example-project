@@ -1,3 +1,11 @@
 # Compiled files
 *.tfstate
 *.tfstate.backup
+_combined.tf
+_combined.tfvars
+_combined_derived.tf
+_combined_derived.tfvars
+_combined_variables.tf
+_remote_setup.sh
+terraform.tfplan
+.terraform/
