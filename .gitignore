@@ -9,3 +9,4 @@ _combined_variables.tf
 _remote_setup.sh
 terraform.tfplan
 .terraform/
+.*.sw*
